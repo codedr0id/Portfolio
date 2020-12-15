@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+.Navbar {
+  background-color: $color-black;
+  color: $color-white;
+  padding: 1rem 3rem;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo-container {
+    h3 {
+      padding-top: 1rem;
+      margin-left: 1rem;
+    }
+
+    .Navbar__link {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  &__list {
+    list-style: none;
+    margin-left: auto;
+    padding-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    margin: auto 1rem;
+    padding: 0 0.5rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: currentColor;
+    text-decoration: none;
+  }
+}
+
+.btn-dark-mode {
+  margin-left: 3rem;
+}
