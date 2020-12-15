@@ -14,7 +14,7 @@ class Navbar extends Component {
     for (let link of this.props.links) {
       navLinks.push(
         <li key={link} className="Navbar__item">
-          <Navlink text={link} href={`#${link}`} />
+          <Navlink text={link} href={`#${link.toLowerCase()}`} />
         </li>
       );
     }
