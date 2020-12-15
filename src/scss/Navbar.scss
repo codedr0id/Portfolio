@@ -10,14 +10,20 @@
   justify-content: space-between;
 
   &__logo-container {
+    a {
+      display: flex;
+      align-items: center;
+
+      &:link,
+      &:visited {
+        color: currentColor;
+        text-decoration: none;
+      }
+    }
+    
     h3 {
       padding-top: 1rem;
       margin-left: 1rem;
-    }
-
-    .Navbar__link {
-      display: flex;
-      align-items: center;
     }
   }
 
@@ -38,12 +44,6 @@
   &__item {
     margin: auto 1rem;
     padding: 0 0.5rem;
-  }
-
-  &__link:link,
-  &__link:visited {
-    color: currentColor;
-    text-decoration: none;
   }
 }
 
