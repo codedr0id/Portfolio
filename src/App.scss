@@ -1,5 +1,13 @@
 @import './scss/variables.scss';
 
 .App {
+  padding: 0 10rem;
+  max-width: 1920px;
+  width: 100%;
   text-align: center;
+}
+
+main {
+  border: 2px solid $color-primary;
+  padding: 0 20rem;
 }

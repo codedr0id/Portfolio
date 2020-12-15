@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
+import About from './components/About';
 import './App.scss';
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Header />
+      <main>
+        <About />
+      </main>
     </div>
   );
 }
