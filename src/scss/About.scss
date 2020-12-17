@@ -1,0 +1,47 @@
+.About {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(2, autofit);
+  // grid-gap: 5rem;
+  place-items: center;
+
+  .section-title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-self: left;
+  }
+
+  &__photo-container {
+    grid-row: 2/4;
+    grid-column: 1/2;
+
+    width: 40rem;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__description {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-left: 5rem;
+    text-align: left;
+
+    p {
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+  }
+
+  .cta {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    justify-self: left;
+    margin-left: 5rem;
+  }
+}
