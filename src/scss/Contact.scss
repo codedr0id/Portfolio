@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+.Contact {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    list-style: none;
+    margin: auto 2rem;
+  }
+}
