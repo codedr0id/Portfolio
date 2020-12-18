@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { displayList } from './helpers';
 import '../scss/Skills.scss';
 
 class Skills extends Component {
@@ -22,32 +23,19 @@ class Skills extends Component {
     ]
   };
 
-  showList(arr) {
-    const list = [];
-    for (let item of arr) {
-      list.push(
-        <li key={item.label} className="Skills__item">
-          <i className={item.icon}> </i>
-          {item.label}
-        </li>
-      );
-    }
-    return list;
-  }
-
   render() {
     return (
-      <section className="Skills">
+      <section className="Skills" id="skills">
         <h1 className="section-title">Skills</h1>
 
         <section className="Skills__container">
           <h2 className="Skills__heading">Development</h2>
-          <ul className="Skills__list">{this.showList(this.props.dev)}</ul>
+          <ul className="Skills__list">{displayList(this.props.dev, 'Skills')}</ul>
         </section>
 
         <section className="Skills__container">
           <h2 className="Skills__heading">Tools</h2>
-          <ul className="Skills__list">{this.showList(this.props.tools)}</ul>
+          <ul className="Skills__list">{displayList(this.props.tools, 'Skills')}</ul>
         </section>
       </section>
     );

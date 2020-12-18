@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../scss/Contact.scss';
+import { displayList } from './helpers';
 
 class Contact extends Component {
   static defaultProps = {
@@ -19,24 +20,11 @@ class Contact extends Component {
     ]
   };
 
-  showList(arr) {
-    const list = [];
-    for (let item of arr) {
-      list.push(
-        <li key={item.label} className="Contact__item">
-          <i className={item.icon}> </i>
-          {item.label}
-        </li>
-      );
-    }
-    return list;
-  }
-
   render() {
     return (
-      <section className="Contact">
+      <section className="Contact" id="contact">
         <h1 className="section-title">Contact</h1>
-        <ul className="Contact__list">{this.showList(this.props.contact)}</ul>
+        <ul className="Contact__list">{displayList(this.props.contact, 'Contact')}</ul>
       </section>
     );
   }
