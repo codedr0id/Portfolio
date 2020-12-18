@@ -3,16 +3,32 @@ import '../scss/Skills.scss';
 
 class Skills extends Component {
   static defaultProps = {
-    dev: ['HTML', 'CSS', 'Sass', 'JavaScript', 'React', 'Node.js', 'Python', 'Java'],
-    tools: ['VS Code', 'Visual Studio', 'Git', 'Github', 'NPM', 'Adobe XD']
+    dev: [
+      { label: 'HTML', icon: 'devicon-html5-plain' },
+      { label: 'CSS', icon: 'devicon-css3-plain' },
+      { label: 'Sass', icon: 'devicon-sass-original' },
+      { label: 'JavaScript', icon: 'devicon-javascript-plain' },
+      { label: 'React', icon: 'devicon-react-original' },
+      { label: 'Node.js', icon: 'devicon-nodejs-plain' },
+      { label: 'Python', icon: 'devicon-python-plain' },
+      { label: 'Java', icon: 'devicon-java-plain' }
+    ],
+    tools: [
+      { label: 'VS Code', icon: 'devicon-visualstudio-plain' },
+      { label: 'Visual Studio', icon: 'devicon-visualstudio-plain' },
+      { label: 'Git', icon: 'devicon-git-plain' },
+      { label: 'Github', icon: 'devicon-github-plain' },
+      { label: 'NPM', icon: 'devicon-npm-original-wordmark' },
+    ]
   };
 
   showList(arr) {
     const list = [];
     for (let item of arr) {
       list.push(
-        <li key={item} className="Skills__item">
-          {item}
+        <li key={item.label} className="Skills__item">
+          <i className={item.icon}> </i>
+          {item.label}
         </li>
       );
     }
