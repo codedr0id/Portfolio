@@ -1,7 +1,7 @@
 @import './scss/variables.scss';
 
 .App {
-  padding: 0 10rem;
+  // padding: 0 10rem;
   max-width: 1920px;
   width: 100%;
   text-align: center;
@@ -20,22 +20,22 @@ main {
   }
 }
 
+section {
+  padding-bottom: 10rem;
+}
+
 // HEADER
 .section-title {
   font-size: 4.5rem;
   margin-bottom: 5rem;
   position: relative;
 
-  &:not(:first-child) {
-    padding-top: 10rem;
-  }
-
   &::before {
     content: '';
     position: absolute;
-    width: 4rem;
-    height: 4rem;
-    left: -50%;
+    width: 3rem;
+    height: 3rem;
+    left: -47%;
     top: 50%;
     transform: translateY(-50%);
   }

@@ -7,12 +7,12 @@ class About extends Component {
     return (
       <section className="About" id="about">
         <h1 className="section-title">About</h1>
-	        <div className="About__photo-container">
+	        <figure className="About__photo-container">
           <img src={aboutPhoto} alt="about photo" className="About__photo" />
-        </div>
+        </figure>
         <div className="About__description">
           <p>
-            My name is <span class="highlight">Mehul Lathi</span> and I'm an aspiring
+            My name is <span className="highlight">Mehul Lathi</span> and I'm an aspiring
             frontend developer living in Udaipur, Rajasthan. I am pursuing my Bachelor's degree in Computer
             Science at IIIT Vadodara and I am eager to start a career in web development.
           </p>

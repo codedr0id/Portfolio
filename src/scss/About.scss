@@ -1,7 +1,8 @@
 .About {
   display: grid;
   grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(2, autofit);
+  // grid-template-columns: repeat(2, autofit);
+  grid-template-columns: 35% auto;
   // grid-gap: 5rem;
   place-items: center;
 
@@ -15,7 +16,7 @@
     grid-row: 2/4;
     grid-column: 1/2;
 
-    width: 40rem;
+    width: 100%;
     border-radius: 4px;
     overflow: hidden;
   }
