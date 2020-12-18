@@ -16,7 +16,7 @@ main {
   & > * {
     grid-column: 2/3;
     padding-left: 5rem;
-    border-left: 4px solid $color-primary;
+    border-left: 0.5rem solid $color-primary;
   }
 }
 
@@ -31,16 +31,17 @@ section {
   position: relative;
   text-align: left;
   // display: inline-block;
-  width: 13.3rem;
+  width: 15rem;
 
   &::before {
     content: '';
     position: absolute;
-    width: 3rem;
-    height: 3rem;
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
     left: -50%;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    // transform: translateY(-50%);
   }
 }
 
