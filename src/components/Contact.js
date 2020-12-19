@@ -23,7 +23,9 @@ class Contact extends Component {
   render() {
     return (
       <section className="Contact" id="contact">
-        <h2 className="section-title">Contact</h2>
+        <h2 className="section-title">
+          Contact
+        </h2>
         <ul className="Contact__list">{displayList(this.props.contact, 'Contact')}</ul>
       </section>
     );

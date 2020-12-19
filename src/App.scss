@@ -33,7 +33,7 @@ section {
   position: relative;
   text-align: left;
   // display: inline-block;
-  width: 14.5rem;
+  width: 100%;
 
   &::before {
     content: '';
@@ -42,8 +42,21 @@ section {
     border: 0.5rem solid $color-primary;
     width: 4rem;
     height: 4rem;
-    left: -50%;
+    left: -6.4%;
     top: 0;
+  }
+
+  &::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.05;
+    font-size: 15rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    // text-transform: uppercase;
+    line-height: 1;
   }
 }
 
