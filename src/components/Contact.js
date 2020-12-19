@@ -5,17 +5,21 @@ import { displayList } from './helpers';
 class Contact extends Component {
   static defaultProps = {
     contact: [
-      { label: 'Email', link: 'mehullathi1999@gmail.com', icon: 'temp' },
-      { label: 'Github', link: 'https://github.com/codedr0id', icon: 'devicon-github-plain' },
+      { 
+        label: 'Email',
+        link: 'mailto:mehullathi1999@gmail.com',
+        icon: 'fas fa-envelope-square'
+      },
+      { label: 'Github', link: 'https://github.com/codedr0id', icon: 'fab fa-github' },
       {
         label: 'LinkedIn',
         link: 'https://www.linkedin.com/in/mehul-lathi-3019a41b0/',
-        icon: 'devicon-linkedin-plain'
+        icon: 'fab fa-linkedin'
       },
       {
         label: 'Twitter',
         link: 'https://twitter.com/mehullathi',
-        icon: 'devicon-twitter-plain'
+        icon: 'fab fa-twitter'
       }
     ]
   };
@@ -23,9 +27,10 @@ class Contact extends Component {
   render() {
     return (
       <section className="Contact" id="contact">
-        <h2 className="section-title">
+        <h2 className="section-title"  data-title="Contact">
           Contact
         </h2>
+
         <ul className="Contact__list">{displayList(this.props.contact, 'Contact')}</ul>
       </section>
     );
