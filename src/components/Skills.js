@@ -26,15 +26,15 @@ class Skills extends Component {
   render() {
     return (
       <section className="Skills" id="skills">
-        <h1 className="section-title">Skills</h1>
+        <h2 className="section-title">Skills</h2>
 
         <section className="Skills__container">
-          <h2 className="Skills__heading">Development</h2>
+        <h3 className="Skills__heading">Development</h3>
           <ul className="Skills__list">{displayList(this.props.dev, 'Skills')}</ul>
         </section>
 
         <section className="Skills__container">
-          <h2 className="Skills__heading">Tools</h2>
+        <h3 className="Skills__heading">Tools</h3>
           <ul className="Skills__list">{displayList(this.props.tools, 'Skills')}</ul>
         </section>
       </section>

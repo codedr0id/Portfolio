@@ -6,9 +6,9 @@ class About extends Component {
   render() {
     return (
       <section className="About" id="about">
-        <h1 className="section-title">About</h1>
+        <h2 className="section-title">About</h2>
 	        <figure className="About__photo-container">
-          <img src={aboutPhoto} alt="about photo" className="About__photo" />
+          <img src={aboutPhoto} alt="Mehul Lathi" className="About__photo" />
         </figure>
         <div className="About__description">
           <p>

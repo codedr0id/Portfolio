@@ -7,7 +7,7 @@ class ProjectsContainer extends Component {
   render() {
     return (
       <section className="ProjectsContainer" id="projects">
-        <h1 className="section-title">Projects</h1>
+        <h2 className="section-title">Projects</h2>
 
         <ul className="ProjectsContainer__list">
           <Project

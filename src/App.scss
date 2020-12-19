@@ -28,20 +28,20 @@ section {
 
 // HEADER
 .section-title {
-  font-size: 4.5rem;
+  font-size: 4rem;
   margin-bottom: 5rem;
   position: relative;
   text-align: left;
   // display: inline-block;
-  width: 15rem;
+  width: 14.5rem;
 
   &::before {
     content: '';
     position: absolute;
     border-radius: 50%;
     border: 0.5rem solid $color-primary;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 4rem;
     left: -50%;
     top: 0;
   }
