@@ -1,0 +1,54 @@
+@import 'variables.scss';
+
+.Project {
+  border: 1px solid black;
+  list-style: none;
+
+  @include flexCenter;
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  &__img {
+    border: 1px solid blue;
+    margin: auto 5rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__details {
+    border: 1px solid teal;
+    @include flexCenter;
+    flex-direction: column;
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__links {
+    @include flexCenter;
+
+    .cta {
+      font-size: 1.2rem;
+      padding: 1rem;
+      width: 10rem;
+      text-align: center;
+
+      &:first-child {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

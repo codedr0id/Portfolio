@@ -39,6 +39,7 @@ section {
     content: '';
     position: absolute;
     border-radius: 50%;
+    border: 0.5rem solid $color-primary;
     width: 4.5rem;
     height: 4.5rem;
     left: -50%;
