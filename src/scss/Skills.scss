@@ -1,30 +1,54 @@
 @import './variables.scss';
 
 .Skills {
-  section {
-    padding-bottom: 3.5rem;
-    @include flexCenter;
-    flex-direction: column;
-  }
+  // section {
+  //   padding-bottom: 3.5rem;
+  //   @include flexCenter;
+  //   flex-direction: column;
+  // }
 
   .section-title {
   }
 
   &__container {
+    padding-bottom: 3.5rem;
+    // @include flexCenter;
+    // flex-direction: column;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr, auto;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 2.5rem;
   }
 
   &__heading {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    // padding-right: 2.5rem;
+    grid-column: 1/2;
+    justify-self: end;
+    padding: 1.8rem 3.5rem 1.8rem 0;
+    border-right: 1px solid rgba($color-black, 0.5);
+    // height: 100%;
+    position: relative;
   }
 
   &__list {
     list-style: none;
+    grid-column: 2/3;
+    justify-self: start;
     @include flexCenter;
     flex-wrap: wrap;
   }
 
   &__item {
     padding: 1rem 1rem;
+    text-align: center;
+
+    i {
+      display: block;
+      font-size: 2.3rem;
+      padding-bottom: 1rem;
+    }
   }
 }

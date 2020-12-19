@@ -6,9 +6,7 @@ function displayList(arr, componentName) {
   for (let item of arr) {
     list.push(
       <li key={`${componentName}-${item.label}`} className={`${componentName}__item`}>
-        <i className={item.icon}> </i>
-        {item.label}
-      </li>
+        <i className={item.icon}></i> {item.label}</li>
     );
   }
   return list;
