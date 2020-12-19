@@ -9,3 +9,10 @@ $color-secondary: #ffd257;
 
 // FONT
 $font-default: 'Comfortaa', cursive;
+
+// MIXINS
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

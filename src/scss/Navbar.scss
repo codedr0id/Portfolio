@@ -8,10 +8,9 @@
   left: 50%;
   transform: translateX(-50%);
   // max-width: 1920px;
-  width: 100vw;
-  display: flex;
+  width: 100%;
+  @include flexCenter;
   justify-content: space-between;
-  align-items: center;
   z-index: 100;
 
   // for larger screens

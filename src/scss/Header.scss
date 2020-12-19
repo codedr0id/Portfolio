@@ -4,11 +4,10 @@
   // border: 1px solid tomato;
   padding: 10rem;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   position: relative;
+  @include flexCenter;
+  flex-direction: column;
+  align-items: flex-start;
 
   color: $color-black;
   background-color: #ff7700;
