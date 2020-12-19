@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+.Footer {
+  background-color: $color-black;
+  color: rgba($color-white, 0.8);
+  text-align: center;
+  width: 100vw;
+  padding: 3rem 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+//   &::before,
+//   &::after {
+//     content: '';
+//     background-color: inherit;
+//     height: 100%;
+//     width: 100%;
+//     position: absolute;
+//     top: 0;
+//   }
+
+//   &::before {
+//     left: -99%;
+//   }
+
+//   &::after {
+//     right: -99%;
+//   }
+}
