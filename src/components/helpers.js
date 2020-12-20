@@ -7,7 +7,12 @@ function displayList(arr, componentName) {
     let listItem;
     if (item.link) {
       listItem = (
-        <a className={`${componentName}__link`} href={item.link} target="_blank">
+        <a
+          className={`${componentName}__link`}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className={item.icon}></i>
           <span>{item.label}</span>
         </a>

@@ -11,8 +11,8 @@ class ProjectsContainer extends Component {
         img: placeholderIcon,
         description: 'Your friendly Algorithm Visualizer',
         tech: ['HTML', 'CSS', 'React'],
-        prevLink: 'https://algolizer.vercel.app',
-        sourceLink: 'https://github.com/codedr0id/AlgoLizer'
+        previewUrl: 'https://algolizer.vercel.app',
+        sourceUrl: 'https://github.com/codedr0id/AlgoLizer'
       },
       {
         title: 'Roshambo',
@@ -20,26 +20,25 @@ class ProjectsContainer extends Component {
         description:
           'A Stone-Paper-Scissors game',
         tech: ['HTML', 'SCSS', 'React'],
-        prevLink: 'https://roshambo-game.vercel.app/',
-        sourceLink: 'https://github.com/codedr0id/Roshambo'
+        previewUrl: 'https://roshambo-game.vercel.app/',
+        sourceUrl : 'https://github.com/codedr0id/Roshambo'
       }
     ]
   };
 
   render() {
     const projectList = this.props.projects.map(proj => (
-      <li key={proj.name}>
-        <Project
-          title={proj.title}
-          img={proj.img}
-          description={proj.description}
-          tech={proj.tech.map(t => (
-            <li>{t}</li>
-          ))}
-          prevLink={proj.prevLink}
-          sourceLink={proj.sourceLink}
-        />
-      </li>
+      <Project
+        key={proj.title}
+        title={proj.title}
+        img={proj.img}
+        description={proj.description}
+        tech={proj.tech.map((t, idx) => (
+          <li key={idx}>{t}</li>
+        ))}
+        previewUrl={proj.previewUrl}
+        sourceUrl={proj.sourceUrl}
+      />
     ));
 
     return (

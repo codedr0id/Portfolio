@@ -3,23 +3,25 @@ import '../scss/Project.scss';
 
 class Project extends Component {
   render() {
+    const { title, img, description, tech, previewUrl, sourceUrl } = this.props;
+
     return (
-      <li className="Project">
+      <li className="Project" key={title}>
         <figure className="Project__img">
-          <img src={this.props.img} alt={this.props.title} />
+          <img src={img} alt={title} />
         </figure>
 
         <div className="Project__details">
-          <h3 className="Project__title">{this.props.title}</h3>
-          <p className="Project__description">{this.props.description}</p>
-          
-          <ul>{this.props.tech}</ul>
+          <h3 className="Project__title">{title}</h3>
+          <p className="Project__description">{description}</p>
+
+          <ul>{tech}</ul>
 
           <div className="Project__links">
-            <a href={this.props.prevLink} target="_blank" className="cta">
+            <a href={previewUrl} target="_blank" rel="noopener noreferrer" className="cta">
               See Live
             </a>
-            <a href={this.props.sourceLink} target="_blank" className="cta">
+            <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="cta">
               Source Code
             </a>
           </div>

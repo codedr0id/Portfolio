@@ -1,8 +1,9 @@
 @import 'variables.scss';
 
 .Project {
-  border: 1px solid black;
+  // border: 1px solid black;
   list-style: none;
+  margin: auto 10%;
 
   @include flexCenter;
 
@@ -11,11 +12,13 @@
   }
 
   &:not(:last-child) {
+    padding-bottom: 5rem;
     margin-bottom: 5rem;
+    border-bottom: 1px solid rgba($color-primary, 0.2);
   }
 
   &__img {
-    border: 1px solid blue;
+    // border: 1px solid blue;
     margin: auto 5rem;
 
     img {
@@ -26,7 +29,7 @@
   }
 
   &__details {
-    border: 1px solid teal;
+    // border: 1px solid teal;
     @include flexCenter;
     flex-direction: column;
   }
@@ -38,8 +41,20 @@
 
   &__description {
     margin-bottom: 1.5rem;
-    max-width: 50rem;
+    width: 50rem;
     text-align: center;
+  }
+
+  &__tech {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    @include flexCenter;
+
+    & > li:not(:last-child)::after {
+      content: '|';
+      color: rgba($color-black, 0.2);
+      margin: auto 0.5rem;
+    }
   }
 
   &__links {
