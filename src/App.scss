@@ -71,8 +71,11 @@ section {
   padding: 1rem 2.5rem;
   border-radius: 0.3rem;
   background-color: $color-primary;
-  transition: background-color 0.2s;
+  // transition: background-color 0.2s;
+  transition: box-shadow 0.25s;
   display: block;
+  position: relative;
+  overflow: hidden;
 
   &:link,
   &:visited {
@@ -80,8 +83,25 @@ section {
     text-decoration: none;
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $color-secondary;
+    transform: scaleX(0);
+    transition: transform 0.5s cubic-bezier(1, 0, 0, 1) 0.2s;
+  }
+
   &:hover {
-    background-color: $color-primary-dark;
+    // background-color: $color-primary-dark;
+    box-shadow: inset 0 0 0 2rem $color-primary-dark;
+
+    &::before {
+      transform: scaleX(0.8);
+    }
   }
 
   &:focus {

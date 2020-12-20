@@ -27,7 +27,7 @@ class Navbar extends Component {
         <div className="Navbar__logo-container">
           <a href="#home">
             <img className="Navbar__logo" src={logo} alt="logo" />
-            <h3>Mehul Lathi</h3>
+            {/* <h3>Mehul Lathi</h3> */}
           </a>
         </div>
 
