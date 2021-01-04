@@ -10,6 +10,11 @@ $color-secondary: #ffd257;
 // FONT
 $font-default: 'Comfortaa', cursive;
 
+// BREAKPOINTS
+$bp-lg: 1100px;
+$bp-md: 768px;
+$bp-sm: 425px;
+
 // MIXINS
 @mixin flexCenter {
     display: flex;

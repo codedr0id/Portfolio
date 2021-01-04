@@ -13,7 +13,7 @@ main {
   // border: 2px solid $color-primary;
   // padding: 0 20rem;
   display: grid;
-  grid-template-columns: 1fr minmax(10px, 120rem) 1fr;
+  grid-template-columns: 1fr minmax($bp-sm, $bp-lg) 1fr;
 
   & > * {
     grid-column: 2/3;
@@ -29,7 +29,7 @@ section {
 
 // HEADER
 .section-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 5rem;
   position: relative;
   text-align: left;
@@ -59,11 +59,6 @@ section {
     // text-transform: uppercase;
     line-height: 1;
   }
-}
-
-.highlight {
-  color: $color-primary;
-  font-weight: 700;
 }
 
 // BUTTON
