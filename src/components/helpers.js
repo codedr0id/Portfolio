@@ -34,4 +34,10 @@ function displayList(arr, componentName) {
   return list;
 }
 
-export { displayList };
+function scrollWithOffset(el) {
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  const yOffset = -80;
+  window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+}
+
+export { displayList, scrollWithOffset };
