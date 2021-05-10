@@ -5,7 +5,7 @@ import aboutPhoto from "../img/me-light.jpg";
 class About extends Component {
   render() {
     return (
-      <section className="About" id="about">
+      <section style={{ marginTop: "20px" }} className="About" id="about">
         <h2 className="section-title">Get to know me</h2>
 
         <div className="About__container">

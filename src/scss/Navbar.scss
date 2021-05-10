@@ -1,14 +1,15 @@
 @import "./variables.scss";
 
 .Navbar {
-  background-color: $color-black;
+  background-color: $color-gray;
+  z-index: 99;
   color: $color-white;
   padding: 1.5rem 10rem;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  box-shadow: $box-shadow-default;
+  // box-shadow: $box-shadow-default;
 
   @include flexCenter;
   justify-content: space-between;
@@ -66,7 +67,7 @@
       left: 0;
       transform: scaleY(0);
       transform-origin: top;
-      background-color: $color-black;
+      background-color: $color-gray;
       box-shadow: $box-shadow-default;
       transition: transform 0.2s;
     }

@@ -11,10 +11,10 @@
   transition: background-color 0.2s, color 0.2s;
 
   @media only screen and (max-width: $bp-lg) {
-    padding: 0 5rem;
+    padding: 0 0rem;
   }
   @media only screen and (max-width: $bp-sm) {
-    padding: 0 2rem;
+    padding: 0 0rem;
   }
 }
 
