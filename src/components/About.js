@@ -26,10 +26,10 @@ class About extends Component {
               <span className="highlight">Technologies</span> I use and
               constantly work on :-
               <ul>
-                <li style={{ listStyle: "none" }}>⭐ ReactJS</li>
                 <li style={{ listStyle: "none" }}>
                   ⭐ Javascript (ES6 and above)
                 </li>
+                <li style={{ listStyle: "none" }}>⭐ ReactJS</li>
                 <li style={{ listStyle: "none" }}>⭐ NodeJS </li>
                 <li style={{ listStyle: "none" }}>⭐ MongoDB</li>
                 <li style={{ listStyle: "none" }}>⭐ Firebase </li>
@@ -41,7 +41,12 @@ class About extends Component {
               𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞/𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 𝐚𝐧𝐝 𝐃𝐞𝐬𝐢𝐠𝐧.
             </p>
 
-            <a href="#" className="cta">
+            <a
+              href="https://drive.google.com/file/d/1FSebC0re0CEnCfUTTzJ-1e6CaIUvElwC/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="cta"
+            >
               Resume
             </a>
           </div>
