@@ -1,9 +1,9 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 .Navbar {
   background-color: $color-black;
   color: $color-white;
-  padding: 1rem 10rem;
+  padding: 1.5rem 10rem;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -16,7 +16,7 @@
   &__logo-container {
     display: flex;
     align-items: center;
-    
+
     // h3 {
     //   padding-top: 1rem;
     //   margin-left: 1rem;
@@ -40,25 +40,27 @@
   &__item {
     margin: auto 3rem;
   }
-  
+
   &__link {
+    transition: color 0.2s ease-in;
+
     &:link,
     &:visited {
       color: currentColor;
       text-decoration: none;
-      transition: color 0.2s ease-in;
     }
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       border-bottom: 1px solid $color-secondary;
       transform: scaleX(0);
       transition: transform 0.5s cubic-bezier(1, 0, 0, 1) 0.2s;
     }
 
-    ul &:hover {
+    &:hover {
       color: $color-primary;
+      cursor: pointer;
 
       &::after {
         transform: scaleX(1);
@@ -67,7 +69,7 @@
   }
 }
 
-.active-link {
+.active-section {
   color: $color-primary;
 }
 

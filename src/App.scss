@@ -1,4 +1,4 @@
-@import './scss/variables.scss';
+@import "./scss/variables.scss";
 
 .App {
   // padding: 0 10rem;
@@ -23,8 +23,7 @@ main {
 }
 
 section {
-  padding-bottom: 10rem;
-  // height: 100vh;
+  padding-bottom: 25rem;
 }
 
 // HEADER
@@ -37,7 +36,7 @@ section {
   width: 100%;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     border-radius: 50%;
     border: 0.5rem solid $color-primary;
@@ -79,7 +78,7 @@ section {
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;

@@ -1,6 +1,40 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 .Contact {
+  padding-bottom: 52rem;
+
+  @media only screen and (max-width: $bp-lg) {
+    padding-bottom: 40rem;
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    padding-bottom: 47rem;
+  }
+
+  &__container {
+    @include flexCenter;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    position: relative;
+    max-width: 50rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2.5rem;
+      height: 2.5rem;
+      top: -2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: no-repeat center url(../img/svg/emoji.svg), $color-secondary;
+      border-radius: 50%;
+      animation: roll 5s ease-in-out infinite alternate;
+    }
+  }
+
   &__list {
     @include flexCenter;
   }
@@ -21,9 +55,25 @@
       font-size: 1.1rem;
       color: inherit;
       text-decoration: none;
-      height: 100%;
-      width: 100%;
+      // height: 100%;
+      // width: 100%;
       position: relative;
+      transition: color 0.2s ease;
+    }
+
+    &:hover {
+      color: $color-primary-dark;
+
+      i {
+        // transform: translateY(-15%);
+        animation: wiggle 0.2s ease infinite alternate;
+      }
+
+      span {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
     }
 
     i {
@@ -31,5 +81,42 @@
       font-size: 5rem;
       padding-bottom: 0.5rem;
     }
+
+    span {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out 0.2s;
+      }
+    }
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(-200%) rotate(-360deg);
+  }
+  50% {
+    transform: translateX(0) rotate(0);
+  }
+  100% {
+    transform: translateX(200%) rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  from {
+    transform: translateY(-15%) rotate(15deg);
+  }
+  to {
+    transform: translateY(-15%) rotate(-15deg);
   }
 }
