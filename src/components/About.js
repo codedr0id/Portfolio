@@ -1,36 +1,46 @@
-import React, { Component } from 'react';
-import '../scss/About.scss';
-import aboutPhoto from '../img/me-light.jpg';
+import React, { Component } from "react";
+import "../scss/About.scss";
+import aboutPhoto from "../img/me-light.jpg";
 
 class About extends Component {
   render() {
     return (
       <section className="About" id="about">
-        <h2 className="section-title">
-          Get to know me 
-        </h2>
+        <h2 className="section-title">Get to know me</h2>
 
         <div className="About__container">
           <picture className="About__photo-container">
             <source srcset={aboutPhoto} media="(max-width: 1100px)" />
             <img src={aboutPhoto} alt="Mehul Lathi" className="About__photo" />
-          </picture> 
+          </picture>
 
           <div className="About__description">
             <p>
-              My name is <span className="highlight">Mehul Lathi</span> and I'm an aspiring
-              frontend developer living in Udaipur, Rajasthan. I am pursuing my Bachelor's degree in Computer
-              Science at IIIT Vadodara and I am eager to start a career in web development.
+              My name is <span className="highlight">Mehul Lathi</span> and I'm
+              a Pre-Final year student at 𝐈𝐈𝐈𝐓 𝐕𝐚𝐝𝐨𝐝𝐚𝐫𝐚 currently pursuing my
+              𝘉𝘢𝘤𝘩𝘦𝘭𝘰𝘳𝘴 𝘪𝘯 𝘊𝘰𝘮𝘱𝘶𝘵𝘦𝘳 𝘚𝘤𝘪𝘦𝘯𝘤𝘦. I have an experience developing 💧
+              Fluid websites and 💻 Web Applications.
             </p>
 
             <p>
-              Duis lobortis gravida erat sed faucibus. Etiam eget sapien cursus, lobortis elit sed, mattis libero. Cras facilisis accumsan lacus. Etiam ut odio tempor, pretium libero at, commodo orci. Praesent vel massa est. Curabitur neque ex, placerat a tempus in, feugiat eu leo. Donec gravida consectetur cursus. Curabitur magna nibh, rhoncus et mollis nec, congue cursus arcu.
+              <span className="highlight">Technologies</span> I use and
+              constantly work on :-
+              <ul>
+                <li style={{ listStyle: "none" }}>⭐ ReactJS</li>
+                <li style={{ listStyle: "none" }}>
+                  ⭐ Javascript (ES6 and above)
+                </li>
+                <li style={{ listStyle: "none" }}>⭐ NodeJS </li>
+                <li style={{ listStyle: "none" }}>⭐ MongoDB</li>
+                <li style={{ listStyle: "none" }}>⭐ Firebase </li>
+              </ul>
             </p>
 
             <p>
-              Cras enim lacus, auctor eget leo ac, dictum elementum tortor. Donec vel posuere tortor, eget euismod nisl. Nullam ac justo eget libero tempus porta ut mollis massa. Sed feugiat ipsum at ullamcorper venenatis. Morbi id lobortis arcu. Sed luctus dui non diam maximus tincidunt. Integer ac erat tortor. Etiam tincidunt finibus ante et suscipit. Etiam tristique turpis sed pulvinar sagittis. Nullam et gravida lorem.
+              🤞 𝐈 𝐚𝐦 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐥𝐨𝐨𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐈𝐧𝐭𝐞𝐫𝐧 𝐎𝐩𝐩𝐨𝐫𝐭𝐮𝐧𝐢𝐭𝐢𝐞𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐫𝐨𝐥𝐞 𝐨𝐟
+              𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞/𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 𝐚𝐧𝐝 𝐃𝐞𝐬𝐢𝐠𝐧.
             </p>
-          
+
             <a href="#" className="cta">
               Resume
             </a>

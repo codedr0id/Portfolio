@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 .About {
   &__container {
@@ -16,7 +16,8 @@
     overflow: hidden;
     align-self: flex-start;
     margin-top: 1rem;
-    box-shadow: 0 1.5rem 3.8rem rgba($color-black, 0.3), 0 1rem 1.2rem rgba($color-black, 0.1);
+    box-shadow: 0 1.5rem 3.8rem rgba($color-black, 0.3),
+      0 1rem 1.2rem rgba($color-black, 0.1);
 
     @media only screen and (max-width: $bp-lg) {
       align-self: center;
@@ -54,11 +55,6 @@
       margin-bottom: 2rem;
       line-height: 1.45;
     }
-  }
-
-  .section-title {
-    @include flexCenter;
-    justify-content: flex-start;
   }
 
   .highlight {
