@@ -1,33 +1,32 @@
-import React, { Component } from 'react';
-import Project from './Project';
+import React, { Component } from "react";
+import Project from "./Project";
 // import './ProjectsContainer.scss';
-import placeholderIcon from '../img/Mehul.png';
+import placeholderIcon from "../img/logo.png";
 
 class ProjectsContainer extends Component {
   static defaultProps = {
     projects: [
       {
-        title: 'AlgoLizer',
+        title: "AlgoLizer",
         img: placeholderIcon,
-        description: 'Your friendly Algorithm Visualizer',
-        tech: ['HTML', 'CSS', 'React'],
-        previewUrl: 'https://algolizer.vercel.app',
-        sourceUrl: 'https://github.com/codedr0id/AlgoLizer'
+        description: "Your friendly Algorithm Visualizer",
+        tech: ["HTML", "CSS", "React"],
+        previewUrl: "https://algolizer.vercel.app",
+        sourceUrl: "https://github.com/codedr0id/AlgoLizer",
       },
       {
-        title: 'Roshambo',
+        title: "Roshambo",
         img: placeholderIcon,
-        description:
-          'A Stone-Paper-Scissors game',
-        tech: ['HTML', 'SCSS', 'React'],
-        previewUrl: 'https://roshambo-game.vercel.app/',
-        sourceUrl : 'https://github.com/codedr0id/Roshambo'
-      }
-    ]
+        description: "A Stone-Paper-Scissors game",
+        tech: ["HTML", "SCSS", "React"],
+        previewUrl: "https://roshambo-game.vercel.app/",
+        sourceUrl: "https://github.com/codedr0id/Roshambo",
+      },
+    ],
   };
 
   render() {
-    const projectList = this.props.projects.map(proj => (
+    const projectList = this.props.projects.map((proj) => (
       <Project
         key={proj.title}
         title={proj.title}
@@ -43,9 +42,7 @@ class ProjectsContainer extends Component {
 
     return (
       <section className="ProjectsContainer" id="projects">
-        <h2 className="section-title">
-          Projects
-        </h2>
+        <h2 className="section-title">Projects</h2>
 
         <ul className="ProjectsContainer__list">{projectList}</ul>
       </section>

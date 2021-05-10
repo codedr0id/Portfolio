@@ -9,6 +9,8 @@
   transform: translateX(-50%);
   // max-width: 1920px;
   width: 100%;
+  box-shadow: $box-shadow-default;
+
   @include flexCenter;
   justify-content: space-between;
   z-index: 100;
@@ -16,10 +18,14 @@
   @media only screen and (max-width: $bp-lg) {
     padding: 1.5rem 5rem;
   }
+  @media only screen and (max-width: $bp-sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-  &__logo-container {
-    display: flex;
-    align-items: center;
+  &__logo-link {
+    cursor: pointer;
+    @include flexCenter;
 
     // h3 {
     //   padding-top: 1rem;
@@ -27,26 +33,65 @@
     // }
   }
 
+  &__logo-container {
+    width: 12rem;
+    height: auto;
+
+    @media only screen and (max-width: $bp-md) {
+      width: 10rem;
+    }
+    @media only screen and (max-width: $bp-sm) {
+      width: 5rem;
+    }
+  }
+
   &__logo {
     height: 3rem;
     width: 10rem;
+    display: block;
   }
 
   &__list {
     list-style: none;
     margin-left: auto;
     padding-top: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
+
+    // hamburger
+    @media only screen and (max-width: $bp-sm) {
+      // display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      background-color: $color-black;
+      box-shadow: $box-shadow-default;
+      transition: transform 0.2s;
+    }
   }
 
   &__item {
     margin: auto 3rem;
+    width: 9rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-lg) {
+      margin: auto 2.5rem;
+    }
+    @media only screen and (max-width: $bp-md) {
+      margin: auto 0;
+    }
+    @media only screen and (max-width: $bp-sm) {
+      padding: 1rem 0;
+    }
   }
 
   &__link {
-    transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in,
+      letter-spacing 0.5s cubic-bezier(1, 0, 0, 1) 0.2s;
 
     &:link,
     &:visited {
@@ -64,6 +109,7 @@
 
     &:hover {
       color: $color-primary;
+      letter-spacing: 2px;
       cursor: pointer;
 
       &::after {
@@ -75,8 +121,45 @@
 
 .active-section {
   color: $color-primary;
+
+  @media only screen and (max-width: $bp-sm) {
+    color: unset;
+  }
 }
 
 .btn-dark-mode {
+  cursor: pointer;
   margin-left: 3rem;
+
+  @media only screen and (max-width: $bp-md) {
+    margin-left: 1rem;
+  }
+  @media only screen and (max-width: $bp-sm) {
+    margin: 2rem 0 3rem;
+  }
+}
+
+.toggle-nav {
+  cursor: pointer;
+  position: absolute;
+  right: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  background-color: currentColor;
+  border: none;
+  outline: none;
+
+  .fas {
+    color: $color-white;
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    display: block;
+  }
+}
+
+.active {
+  transform: scaleY(1);
 }
