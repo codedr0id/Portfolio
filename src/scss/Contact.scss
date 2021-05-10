@@ -1,14 +1,14 @@
 @import "./variables.scss";
 
 .Contact {
-  padding-bottom: 52rem;
+  padding-bottom: 46rem;
 
   @media only screen and (max-width: $bp-lg) {
-    padding-bottom: 40rem;
+    padding-bottom: 34rem;
   }
 
   @media only screen and (max-width: $bp-md) {
-    padding-bottom: 47rem;
+    padding-bottom: 41rem;
   }
 
   &__container {
@@ -20,6 +20,7 @@
     margin-bottom: 2rem;
     position: relative;
     max-width: 50rem;
+    text-align: center;
 
     &::before {
       content: "";
@@ -37,12 +38,17 @@
 
   &__list {
     @include flexCenter;
+    flex-wrap: wrap;
   }
 
   &__item {
     list-style: none;
     text-decoration: none;
     margin: auto 1.5rem;
+
+    @media only screen and (max-width: $bp-sm) {
+      padding-top: 2rem;
+    }
   }
 
   &__link {
@@ -51,12 +57,9 @@
 
     &:link,
     &:visited {
-      // border: 1px solid red;
       font-size: 1.1rem;
       color: inherit;
       text-decoration: none;
-      // height: 100%;
-      // width: 100%;
       position: relative;
       transition: color 0.2s ease;
     }
@@ -65,7 +68,6 @@
       color: $color-primary-dark;
 
       i {
-        // transform: translateY(-15%);
         animation: wiggle 0.2s ease infinite alternate;
       }
 

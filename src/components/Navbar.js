@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { NavHashLink, HashLink } from 'react-router-hash-link';
 // import { scrollWithOffset } from './helpers';
-import { Link, Events } from "react-scroll";
+import { Link } from "react-scroll";
 import "../scss/Navbar.scss";
 import logo from "../img/Mehul.png";
 
@@ -9,16 +9,6 @@ class Navbar extends Component {
   static defaultProps = {
     links: ["About", "Skills", "Projects", "Contact"],
   };
-
-  componentDidMount() {
-    Events.scrollEvent.register("begin", function () {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register("end", function () {
-      console.log("end", arguments);
-    });
-  }
 
   render() {
     const navLinks = this.props.links.map((link) => (

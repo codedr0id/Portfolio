@@ -1,4 +1,4 @@
-@import './scss/variables.scss';
+@import "./scss/variables.scss";
 
 *,
 *::before,
@@ -15,6 +15,9 @@ html {
   @media only screen and (max-width: $bp-md) {
     font-size: 57%;
   }
+  @media only screen and (max-width: $bp-sm) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -28,5 +31,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }

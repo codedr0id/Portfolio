@@ -30,6 +30,9 @@
     margin: auto 5rem;
     width: 50%;
     box-shadow: $box-shadow-default;
+    border-radius: 4px;
+    // border-radius: 40% 10% / 10% 50%;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -37,10 +40,10 @@
       display: block;
     }
 
-    @media only screen and (max-width: $bp-lg) {
-      width: 70%;
-      margin: auto 3rem;
-    }
+    // @media only screen and (max-width: $bp-lg) {
+    //   width: 70%;
+    //   margin: auto 3rem;
+    // }
 
     @media only screen and (max-width: $bp-md) {
       width: 100%;
@@ -60,6 +63,7 @@
 
   &__title {
     font-size: 2.5rem;
+    text-align: center;
     margin-bottom: 1rem;
 
     @media only screen and (max-width: $bp-md) {

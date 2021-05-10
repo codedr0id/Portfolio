@@ -1,24 +1,27 @@
 @import "./scss/variables.scss";
 
 .App {
-  // padding: 0 10rem;
-  // max-width: 1920px;
-  // width: 100%;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
+
+  @media only screen and (max-width: $bp-lg) {
+    padding: 0 5rem;
+  }
+  @media only screen and (max-width: $bp-sm) {
+    padding: 0 2rem;
+  }
 }
 
 main {
-  // border: 2px solid $color-primary;
-  // padding: 0 20rem;
   display: grid;
-  grid-template-columns: 1fr minmax($bp-sm, $bp-lg) 1fr;
+  grid-template-columns: 1fr minmax(auto, $bp-lg) 1fr;
+  position: relative;
 
   & > * {
     grid-column: 2/3;
-    padding-left: 5rem;
-    border-left: 0.5rem solid $color-primary;
+    // padding-left: 5rem;
+    // border-left: 0.5rem solid $color-primary;
   }
 }
 
@@ -35,16 +38,23 @@ section {
   // display: inline-block;
   width: 100%;
 
-  &::before {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 0.5rem solid $color-primary;
-    width: 4rem;
-    height: 4rem;
-    left: -6.4%;
-    top: 0;
+  @media only screen and (max-width: $bp-lg) {
+    font-size: 3.3rem;
   }
+  @media only screen and (max-width: $bp-sm) {
+    text-align: center;
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   border-radius: 50%;
+  //   border: 0.5rem solid $color-primary;
+  //   width: 4rem;
+  //   height: 4rem;
+  //   left: -6.4%;
+  //   top: 0;
+  // }
 
   &::after {
     content: attr(data-title);
@@ -54,9 +64,21 @@ section {
     opacity: 0.05;
     font-size: 15rem;
     font-weight: 700;
+    color: $color-primary;
     letter-spacing: 0.3rem;
     // text-transform: uppercase;
     line-height: 1;
+
+    @media only screen and (max-width: $bp-lg) {
+      font-size: 13rem;
+      letter-spacing: 0;
+    }
+    @media only screen and (max-width: $bp-sm) {
+      font-size: 10rem;
+      right: unset;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -65,7 +87,6 @@ section {
   padding: 1rem 2.5rem;
   border-radius: 0.3rem;
   background-color: $color-primary;
-  // transition: background-color 0.2s;
   transition: box-shadow 0.25s;
   display: block;
   position: relative;
@@ -90,7 +111,6 @@ section {
   }
 
   &:hover {
-    // background-color: $color-primary-dark;
     box-shadow: inset 0 0 0 2rem $color-primary-dark;
 
     &::before {
