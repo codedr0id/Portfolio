@@ -8,7 +8,9 @@ $color-primary-dark: #d84a3b;
 $color-secondary: #ffd257;
 
 // FONT
-$font-default: 'Comfortaa', cursive;
+$font-default: "Comfortaa", cursive;
+$box-shadow-default: 0 1.5rem 3.8rem rgba($color-black, 0.3),
+  0 1rem 1.2rem rgba($color-black, 0.1);
 
 // BREAKPOINTS
 $bp-lg: 1100px;
@@ -17,7 +19,7 @@ $bp-sm: 425px;
 
 // MIXINS
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

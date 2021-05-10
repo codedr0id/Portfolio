@@ -10,7 +10,7 @@ class About extends Component {
 
         <div className="About__container">
           <picture className="About__photo-container">
-            <source srcset={aboutPhoto} media="(max-width: 1100px)" />
+            <source srcSet={aboutPhoto} media="(max-width: 1100px)" />
             <img src={aboutPhoto} alt="Mehul Lathi" className="About__photo" />
           </picture>
 

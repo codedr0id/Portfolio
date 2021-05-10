@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 .Project {
   // border: 1px solid black;
@@ -7,8 +7,16 @@
 
   @include flexCenter;
 
+  @media only screen and (max-width: $bp-md) {
+    flex-direction: column;
+  }
+
   &:nth-child(2n) {
     flex-direction: row-reverse;
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    flex-direction: column;
   }
 
   &:not(:last-child) {
@@ -20,11 +28,22 @@
   &__img {
     // border: 1px solid blue;
     margin: auto 5rem;
+    width: 50%;
+    box-shadow: $box-shadow-default;
 
     img {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    @media only screen and (max-width: $bp-lg) {
+      width: 70%;
+      margin: auto 3rem;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      width: 100%;
     }
   }
 
@@ -32,26 +51,37 @@
     // border: 1px solid teal;
     @include flexCenter;
     flex-direction: column;
+    width: 40%;
+
+    @media only screen and (max-width: $bp-md) {
+      width: 100%;
+    }
   }
 
   &__title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+
+    @media only screen and (max-width: $bp-md) {
+      margin: 2rem auto 1.5rem;
+    }
   }
 
   &__description {
     margin-bottom: 1.5rem;
-    width: 50rem;
+    width: 100%;
     text-align: center;
   }
 
   &__tech {
     list-style: none;
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
     @include flexCenter;
+    flex-wrap: wrap;
 
     & > li:not(:last-child)::after {
-      content: '|';
+      content: "|";
       color: rgba($color-black, 0.2);
       margin: auto 0.5rem;
     }
