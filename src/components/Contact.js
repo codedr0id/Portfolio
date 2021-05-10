@@ -18,13 +18,13 @@ class Contact extends Component {
       },
       {
         label: "LinkedIn",
-        link: "https://www.linkedin.com/in/mehul-lathi-3019a41b0/",
+        link: "https://www.linkedin.com/in/mehul-lathi/",
         icon: "fab fa-linkedin",
       },
       {
-        label: "Twitter",
-        link: "https://twitter.com/mehullathi",
-        icon: "fab fa-twitter",
+        label: "Instagram",
+        link: "https://www.instagram.com/lathi_saab/",
+        icon: "fab fa-instagram",
       },
     ],
   };

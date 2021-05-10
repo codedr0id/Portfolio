@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../scss/About.scss";
-import aboutPhoto from "../img/me-light.jpg";
+import aboutPhoto from "../img/Mehul.jpg";
 
 class About extends Component {
   render() {
