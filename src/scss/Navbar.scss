@@ -7,7 +7,6 @@
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  // max-width: 1920px;
   width: 100%;
   box-shadow: $box-shadow-default;
 
@@ -154,7 +153,6 @@
 
 .btn-dark-mode {
   cursor: pointer;
-  // margin-left: 3rem;
   background-color: transparent;
   border: none;
   outline: none;
