@@ -8,7 +8,7 @@ class Footer extends Component {
         <p className="Footer__copyright">
           &copy; 2021 <span>Mehul Lathi</span>
         </p>
-        <p className="Footer__message">Code with ♥ by MEHUL.</p>
+        <p className="Footer__message">Code with 💗 by MEHUL.</p>
       </footer>
     );
   }

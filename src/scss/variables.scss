@@ -1,6 +1,7 @@
 // COLORS
 $color-black: #050505;
 $color-white: #fbfbf2;
+$color-white-2: #f9f7f0;
 $color-gray: #494949;
 
 $color-primary: #ed6a5a;
@@ -15,7 +16,8 @@ $box-shadow-default: 0 1.5rem 3.8rem rgba($color-black, 0.3),
 // BREAKPOINTS
 $bp-lg: 1100px;
 $bp-md: 768px;
-$bp-sm: 425px;
+$bp-sm: 600px;
+$bp-xs: 425px;
 
 // MIXINS
 @mixin flexCenter {

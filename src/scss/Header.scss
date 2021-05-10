@@ -38,7 +38,7 @@
       font-size: 6rem;
     }
 
-    @media only screen and (max-width: $bp-sm) {
+    @media only screen and (max-width: $bp-xs) {
       font-size: 4.5rem;
     }
   }
@@ -46,7 +46,7 @@
   &__sub-heading {
     font-size: 2.73rem;
     font-weight: 100;
-    color: $color-gray;
+    opacity: 0.75;
 
     @media only screen and (max-width: $bp-lg) {
       font-size: 2.43rem;
@@ -54,6 +54,10 @@
 
     @media only screen and (max-width: $bp-md) {
       font-size: 2.23rem;
+    }
+
+    @media only screen and (max-width: $bp-xs) {
+      font-size: 2rem;
     }
   }
 

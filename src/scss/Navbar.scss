@@ -127,18 +127,6 @@
   }
 }
 
-.btn-dark-mode {
-  cursor: pointer;
-  margin-left: 3rem;
-
-  @media only screen and (max-width: $bp-md) {
-    margin-left: 1rem;
-  }
-  @media only screen and (max-width: $bp-sm) {
-    margin: 2rem 0 3rem;
-  }
-}
-
 .toggle-nav {
   cursor: pointer;
   position: absolute;
@@ -162,4 +150,61 @@
 
 .active {
   transform: scaleY(1);
+}
+
+.btn-dark-mode {
+  cursor: pointer;
+  // margin-left: 3rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 5rem;
+
+  @media only screen and (max-width: $bp-md) {
+    margin-left: 1rem;
+  }
+  @media only screen and (max-width: $bp-sm) {
+    margin: 2rem 0 3rem;
+  }
+
+  &:hover {
+    .moon,
+    .sun {
+      animation-delay: 0.3s;
+    }
+
+    .moon {
+      animation: rise 1s ease infinite alternate;
+    }
+    .sun {
+      animation: rotate 5s linear infinite;
+    }
+  }
+}
+
+.moon,
+.sun {
+  fill: $color-secondary;
+}
+
+.dark-mode {
+  background-color: $color-gray !important;
+  color: $color-white-2 !important;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rise {
+  from {
+    transform: translateY(-15%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

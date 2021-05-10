@@ -5,6 +5,11 @@
   position: relative;
   margin: 0 auto;
 
+  font-size: 1.6rem;
+  background-color: $color-white;
+  color: $color-black;
+  transition: background-color 0.2s, color 0.2s;
+
   @media only screen and (max-width: $bp-lg) {
     padding: 0 5rem;
   }
@@ -45,23 +50,32 @@ section {
     text-align: center;
   }
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   border-radius: 50%;
-  //   border: 0.5rem solid $color-primary;
-  //   width: 4rem;
-  //   height: 4rem;
-  //   left: -6.4%;
-  //   top: 0;
-  // }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    height: 20rem;
+    background: url(./img/text-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: -3rem;
+    top: -130%;
+    opacity: 0.4;
+
+    @media only screen and (max-width: $bp-sm) {
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 
   &::after {
     content: attr(data-title);
     position: absolute;
     top: 0;
     right: 0;
-    opacity: 0.05;
+    opacity: 0.04;
     font-size: 15rem;
     font-weight: 700;
     color: $color-primary;
@@ -74,10 +88,12 @@ section {
       letter-spacing: 0;
     }
     @media only screen and (max-width: $bp-sm) {
-      font-size: 10rem;
-      right: unset;
-      left: 50%;
-      transform: translateX(-50%);
+      // font-size: 10rem;
+      // right: unset;
+      // left: 50%;
+      // bottom: -100%;
+      // transform: translateX(-50%);
+      opacity: 0;
     }
   }
 }

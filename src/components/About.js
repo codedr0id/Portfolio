@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../scss/About.scss";
 import aboutPhoto from "../img/me-light.jpg";
+import { ReactComponent as ContactBg } from "../img/svg/contact-bg.svg";
 
 class About extends Component {
   render() {
@@ -46,6 +47,8 @@ class About extends Component {
             </a>
           </div>
         </div>
+
+        <ContactBg />
       </section>
     );
   }

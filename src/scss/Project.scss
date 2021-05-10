@@ -86,7 +86,7 @@
 
     & > li:not(:last-child)::after {
       content: "|";
-      color: rgba($color-black, 0.2);
+      color: rgba($color-primary, 0.2);
       margin: auto 0.5rem;
     }
   }
