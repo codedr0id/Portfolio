@@ -14,13 +14,20 @@ class Navbar extends Component {
     super(props);
     this.state = {
       navIcon: "bars",
-      darkMode: false,
-      darkModeIcon: <Sun ref={this.svgRef} />,
+      // darkMode: false,
+      darkMode: JSON.parse(window.localStorage.getItem("darkMode")),
     };
 
     this.svgRef = React.createRef();
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleDarkMode = this.toggleDarkMode.bind(this);
+  }
+
+  componentDidMount() {
+    const app = document.querySelector(".App");
+    if (this.state.darkMode) {
+      app.classList.add("dark-mode");
+    }
   }
 
   toggleNav() {
@@ -34,7 +41,16 @@ class Navbar extends Component {
 
   toggleDarkMode() {
     const app = document.querySelector(".App");
-    this.setState({ darkMode: !this.state.darkMode });
+    this.setState(
+      {
+        darkMode: !this.state.darkMode,
+      },
+      () =>
+        window.localStorage.setItem(
+          "darkMode",
+          JSON.stringify(this.state.darkMode)
+        )
+    );
 
     if (!this.state.darkMode) {
       app.classList.add("dark-mode");
@@ -43,6 +59,7 @@ class Navbar extends Component {
       app.classList.remove("dark-mode");
       this.setState({ darkModeIcon: <Sun ref={this.svgRef} /> });
     }
+    window.location.reload();
   }
 
   render() {
@@ -87,8 +104,17 @@ class Navbar extends Component {
 
         <ul className="Navbar__list">
           {navLinks}
-          <button className="btn-dark-mode" onClick={this.toggleDarkMode}>
-            {this.state.darkModeIcon}
+          <button
+            onClick={() => {
+              this.toggleDarkMode();
+            }}
+            className="btn-dark-mode"
+          >
+            {this.state.darkMode === false ? (
+              <Sun ref={this.svgRef} />
+            ) : (
+              <Moon ref={this.svgRef} />
+            )}
           </button>
         </ul>
       </nav>
