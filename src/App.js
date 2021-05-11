@@ -18,7 +18,7 @@ class App extends React.Component {
   componentDidMount() {
     this.isLoading = setTimeout(() => {
       this.setState({ loading: false });
-    }, 1800);
+    }, 2200);
   }
 
   componentWillUnmount() {
