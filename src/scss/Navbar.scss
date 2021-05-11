@@ -2,11 +2,11 @@
 
 .Navbar {
   background-color: $color-gray;
-  z-index: 99;
+  // z-index: 99;
   color: $color-white;
   padding: 1.5rem 10rem;
   position: fixed;
-  left: 50%;
+  left: 49.9999%;
   transform: translateX(-50%);
   width: 100%;
   // box-shadow: $box-shadow-default;
