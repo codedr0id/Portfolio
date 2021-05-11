@@ -23,7 +23,13 @@
   &__message {
     color: rgba($color-white, 0.5);
     font-weight: 300;
-    font-size: 1rem;
-    margin-top: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  &__bold {
+    font-size: 15px;
+    color: #ed6a5a;
+    margin: auto 5px;
   }
 }
