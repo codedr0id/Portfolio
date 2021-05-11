@@ -26,11 +26,6 @@
   &__logo-link {
     cursor: pointer;
     @include flexCenter;
-
-    // h3 {
-    //   padding-top: 1rem;
-    //   margin-left: 1rem;
-    // }
   }
 
   &__logo-container {
@@ -136,7 +131,7 @@
   top: 50%;
   transform: translateY(-50%);
   display: none;
-  background-color: currentColor;
+  background-color: #2f2f39;
   border: none;
   outline: none;
 

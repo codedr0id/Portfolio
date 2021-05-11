@@ -66,6 +66,7 @@
     margin-bottom: 1.5rem;
     width: 100%;
     text-align: center;
+    line-height: 1.45;
   }
 
   &__tech {
@@ -93,6 +94,21 @@
 
       &:first-child {
         margin-right: 2rem;
+      }
+    }
+
+    .cta-secondary {
+      background-color: transparent;
+
+      &:link,
+      &:visited {
+        color: $color-primary;
+        transition: color 0.2s ease;
+      }
+
+      &:hover {
+        color: $color-primary-dark;
+        box-shadow: none;
       }
     }
   }

@@ -5,6 +5,8 @@ import logo from "../img/logo.png";
 import { ReactComponent as Sun } from "../img/svg/sun.svg";
 import { ReactComponent as Moon } from "../img/svg/moon.svg";
 
+const maxWidth = "600px";
+
 class Navbar extends Component {
   static defaultProps = {
     links: ["About", "Skills", "Projects", "Contact"],
@@ -16,6 +18,7 @@ class Navbar extends Component {
       navIcon: "bars",
       // darkMode: false,
       darkMode: JSON.parse(window.localStorage.getItem("darkMode")),
+      matches: window.matchMedia(`(max-width: ${maxWidth})`).matches,
     };
 
     this.svgRef = React.createRef();
@@ -29,19 +32,41 @@ class Navbar extends Component {
     if (this.state.darkMode) {
       app.classList.add("dark-mode");
     }
+
+    const handler = (e) => this.setState({ matches: e.matches });
+    window.matchMedia(`(max-width: ${maxWidth})`).addListener(handler);
+  }
+
+  componentDidUpdate() {
+    const navList = document.querySelector(".Navbar__list");
+    const overlay = this.overlayRef.current;
+
+    // handle overlay issue when resizing screen
+    if (
+      this.state.matches === false &&
+      overlay.classList.contains("overlayActive")
+    ) {
+      overlay.classList.remove("overlayActive");
+    }
+
+    if (this.state.matches && navList.classList.contains("active")) {
+      overlay.classList.add("overlayActive");
+    }
   }
 
   toggleNav() {
     const navList = document.querySelector(".Navbar__list");
-    navList.classList.toggle("active");
+    const overlay = this.overlayRef.current;
+
+    // only toggle hamburger and overlay if screensize = maxWidth
+    if (this.state.matches) {
+      navList.classList.toggle("active");
+      overlay.classList.toggle("overlayActive");
+    }
 
     navList.classList.contains("active")
       ? this.setState({ navIcon: "times" })
       : this.setState({ navIcon: "bars" });
-
-    // toggle overlay
-    const overlay = this.overlayRef.current;
-    overlay.classList.toggle("overlayActive");
   }
 
   toggleDarkMode() {
@@ -104,7 +129,7 @@ class Navbar extends Component {
             duration={1000}
           >
             <picture className="Navbar__logo-container">
-              <source srcSet={logo} media="(max-width: 600px)" />
+              <source srcSet={logo} media={`(max-width: ${maxWidth})`} />
               <img className="Navbar__logo" src={logo} alt="logo" />
             </picture>
           </Link>

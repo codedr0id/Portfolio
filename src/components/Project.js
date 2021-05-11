@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import '../scss/Project.scss';
+import React, { Component } from "react";
+import "../scss/Project.scss";
 
 class Project extends Component {
   render() {
-    const { title, img, description, tech, previewUrl, sourceUrl } = this.props;
+    const { title, img, description, tech, previewUrl } = this.props;
 
     return (
       <li className="Project" key={title}>
@@ -18,12 +18,22 @@ class Project extends Component {
           <ul>{tech}</ul>
 
           <div className="Project__links">
-            <a href={previewUrl} target="_blank" rel="noopener noreferrer" className="cta">
+            <a
+              href={previewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-secondary"
+            >
               See Live
             </a>
-            <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="cta">
+            {/* <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-secondary"
+            >
               Source Code
-            </a>
+            </a> */}
           </div>
         </div>
       </li>
