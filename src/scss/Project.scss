@@ -3,7 +3,6 @@
 .Project {
   list-style: none;
   margin: auto 10%;
-
   @include flexCenter;
 
   @media only screen and (max-width: $bp-md) {
@@ -12,16 +11,21 @@
 
   &:nth-child(2n) {
     flex-direction: row-reverse;
-  }
 
-  @media only screen and (max-width: $bp-md) {
-    flex-direction: column;
+    @media only screen and (max-width: $bp-md) {
+      flex-direction: column;
+    }
   }
 
   &:not(:last-child) {
     padding-bottom: 5rem;
     margin-bottom: 5rem;
     border-bottom: 1px solid rgba($color-primary, 0.2);
+  }
+
+  // hide live button on portfolio project
+  &:first-of-type .cta:first-child {
+    display: none;
   }
 
   &__img {
@@ -39,6 +43,7 @@
 
     @media only screen and (max-width: $bp-md) {
       width: 100%;
+      margin-bottom: 1rem;
     }
   }
 

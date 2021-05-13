@@ -12,7 +12,7 @@ class Contact extends Component {
         icon: "fas fa-envelope-square",
       },
       {
-        label: "Github",
+        label: "GitHub",
         link: "https://github.com/codedr0id",
         icon: "fab fa-github",
       },

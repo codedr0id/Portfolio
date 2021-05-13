@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // helper functions
 function displayList(arr, componentName) {
@@ -26,7 +26,11 @@ function displayList(arr, componentName) {
     }
 
     list.push(
-      <li key={`${componentName}-${item.label}`} className={`${componentName}__item`}>
+      <li
+        key={`${componentName}-${item.label}`}
+        className={`${componentName}__item`}
+        style={{ margin: " auto 0.7rem" }}
+      >
         {listItem}
       </li>
     );
@@ -37,7 +41,7 @@ function displayList(arr, componentName) {
 function scrollWithOffset(el) {
   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
   const yOffset = -80;
-  window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
 }
 
 export { displayList, scrollWithOffset };

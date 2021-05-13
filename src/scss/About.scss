@@ -46,6 +46,7 @@
     @media only screen and (max-width: $bp-lg) {
       width: 85%;
       margin-left: 0;
+      margin-top: 2rem;
     }
 
     @media only screen and (max-width: $bp-md) {
@@ -54,7 +55,7 @@
 
     p {
       margin-bottom: 2rem;
-      line-height: 1.45;
+      line-height: 1.6;
     }
   }
 
@@ -64,8 +65,12 @@
   }
 
   .cta {
-    margin-left: 38%;
+    margin-top: 10px;
     text-align: center;
     display: inline-block;
+
+    @media only screen and (max-width: $bp-md) {
+      margin-left: 38%;
+    }
   }
 }

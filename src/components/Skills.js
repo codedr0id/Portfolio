@@ -18,7 +18,7 @@ class Skills extends Component {
     ],
     tools: [
       { label: "VS Code", icon: "devicon-visualstudio-plain" },
-      { label: "Github", icon: "fab fa-github" },
+      { label: "GitHub", icon: "fab fa-github" },
       { label: "Firebase", icon: "devicon-firebase-plain" },
       { label: "Heroku", icon: "devicon-heroku-original" },
       { label: "NPM", icon: "fab fa-npm" },

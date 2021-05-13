@@ -1,26 +1,44 @@
 import React, { Component } from "react";
 import Project from "./Project";
-// import './ProjectsContainer.scss';
-import placeholderIcon from "../img/logo.png";
+import algolizer from "../img/projects/algolizer.png";
+import roshambo from "../img/projects/roshambo.png";
+import bloodbank from "../img/projects/blood-bank.png";
+import portfolio from "../img/projects/portfolio.png";
 
 class ProjectsContainer extends Component {
   static defaultProps = {
     projects: [
       {
+        title: "My Portfolio",
+        img: portfolio,
+        description: "You are looking at it right now 😁",
+        tech: ["HTML", "SCSS", "React"],
+        previewUrl: "https://mehullathi.vercel.app",
+        sourceUrl: "https://github.com/codedr0id/Portfolio",
+      },
+      {
         title: "AlgoLizer",
-        img: placeholderIcon,
-        description: "Your friendly Algorithm Visualizer",
+        img: algolizer,
+        description: "Your friendly Algorithm Visualizer 📊",
         tech: ["HTML", "CSS", "React"],
         previewUrl: "https://algolizer.vercel.app",
         sourceUrl: "https://github.com/codedr0id/AlgoLizer",
       },
       {
         title: "Roshambo",
-        img: placeholderIcon,
-        description: "A Stone-Paper-Scissors game",
+        img: roshambo,
+        description: "A Stone-Paper-Scissors game 🤘",
         tech: ["HTML", "SCSS", "React"],
         previewUrl: "https://roshambo-game.vercel.app/",
         sourceUrl: "https://github.com/codedr0id/Roshambo",
+      },
+      {
+        title: "Blood Bank",
+        img: bloodbank,
+        description: "A Web App template for Blood Bank Organization 🩸",
+        tech: ["HTML", "CSS", "Javascript"],
+        previewUrl: "https://iiitbb.herokuapp.com/",
+        sourceUrl: "https://github.com/codedr0id/Blood-bank",
       },
     ],
   };
@@ -42,7 +60,9 @@ class ProjectsContainer extends Component {
 
     return (
       <section className="ProjectsContainer" id="projects">
-        <h2 className="section-title">Projects</h2>
+        <h2 className="section-title" data-title="Projects">
+          Projects I built
+        </h2>
 
         <ul className="ProjectsContainer__list">{projectList}</ul>
       </section>

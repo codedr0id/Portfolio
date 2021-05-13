@@ -69,7 +69,7 @@
       color: $color-primary-dark;
 
       i {
-        animation: wiggle 0.2s ease infinite alternate;
+        animation: wiggle 0.3s ease-in-out infinite alternate;
       }
 
       span {
@@ -87,6 +87,7 @@
 
     span {
       position: relative;
+      margin: auto 1rem;
 
       &::after {
         content: "";
@@ -128,9 +129,9 @@
 
 @keyframes wiggle {
   from {
-    transform: translateY(-15%) rotate(15deg);
+    transform: translateY(-15%) rotate(10deg);
   }
   to {
-    transform: translateY(-15%) rotate(-15deg);
+    transform: translateY(-15%) rotate(-10deg);
   }
 }

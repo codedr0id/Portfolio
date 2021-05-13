@@ -1,12 +1,8 @@
 @import "./variables.scss";
 
 .Skills {
-  .section-title {
-  }
-
   &__container {
-    // padding-bottom: 3.5rem;
-
+    padding-bottom: 4rem;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr, auto;
@@ -42,6 +38,12 @@
     list-style: none;
     @include flexCenter;
     flex-wrap: wrap;
+
+    &:nth-child(2) {
+      @media only screen and (max-width: $bp-md) {
+        margin-bottom: 2rem;
+      }
+    }
   }
 
   &__item {
