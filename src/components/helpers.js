@@ -12,6 +12,7 @@ function displayList(arr, componentName) {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
+          alt="Mehul Lathi"
         >
           <i className={item.icon}></i>
           <span>{item.label}</span>
