@@ -20,4 +20,4 @@
 
 ##### The project automatically starts on `localhost:3000` !!
 
-<p align="center"> <strong></></strong> with ❤️ by <em>Mehul</em></p>
+<p align="center"> Built with ❤️ by <em>Mehul</em></p>
