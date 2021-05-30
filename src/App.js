@@ -9,6 +9,9 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
 
+// devicons
+import "../node_modules/devicon/devicon.min.css";
+
 import "./App.scss";
 class App extends React.Component {
   state = {
