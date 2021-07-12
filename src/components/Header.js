@@ -38,10 +38,10 @@ class Header extends Component {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        birdSize: 1.1,
-        wingSpan: 18.0,
+        birdSize: 2,
+        wingSpan: 25.0,
         separation: 50.0,
-        quantity: 4.0,
+        quantity: 4.2,
         backgroundAlpha: 0.01,
       });
     }

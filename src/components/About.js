@@ -29,6 +29,7 @@ class About extends Component {
                 <li style={{ listStyle: "none" }}>
                   ⭐ Javascript (ES6 and above)
                 </li>
+                <li style={{ listStyle: "none" }}>⭐ Python</li>
                 <li style={{ listStyle: "none" }}>⭐ ReactJS</li>
                 <li style={{ listStyle: "none" }}>⭐ NodeJS </li>
                 <li style={{ listStyle: "none" }}>⭐ MongoDB</li>
@@ -36,13 +37,13 @@ class About extends Component {
               </ul>
             </p>
 
-            <p>
+            {/* <p>
               🤞 𝐈 𝐚𝐦 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐥𝐨𝐨𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐈𝐧𝐭𝐞𝐫𝐧 𝐎𝐩𝐩𝐨𝐫𝐭𝐮𝐧𝐢𝐭𝐢𝐞𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐫𝐨𝐥𝐞 𝐨𝐟
               𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞/𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 𝐚𝐧𝐝 𝐃𝐞𝐬𝐢𝐠𝐧.
-            </p>
+            </p> */}
 
             <a
-              href="https://drive.google.com/file/d/1FSebC0re0CEnCfUTTzJ-1e6CaIUvElwC/view?usp=sharing"
+              href="https://drive.google.com/file/d/1YcmMjR1rcdH_rD2Fb0wTNtq1j1mktPHI/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="cta"
