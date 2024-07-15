@@ -2,15 +2,34 @@
 
 .Skills {
   padding: 6rem 0;
-  background-color: $color-white-2;
   margin-bottom: 3.0rem;
+
+  &__container {
+    @include flexCenter;
+    flex-direction: column;
+    padding: 0 5rem;
+
+    @media only screen and (max-width: $bp-lg) {
+      padding: 0 3rem;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      padding: 0 2rem;
+    }
+  }
 
   .section-title {
     text-align: center;
     margin-bottom: 4rem;
     position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: $color-black;
-    
+
+    .dark-mode & {
+      color: $color-white;
+    }
+
     &::after {
       content: attr(data-title);
       position: absolute;
@@ -27,9 +46,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 0 2rem;
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
+
+    @media only screen and (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__category {
@@ -37,10 +60,15 @@
     border-radius: 10px;
     padding: 2rem;
     box-shadow: $box-shadow-default;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .dark-mode & {
+      background-color: $color-gray;
+      box-shadow: 0 6px 8px rgba(251, 251, 242, 0.1);
+    }
 
     &:hover {
       transform: translateY(-5px);
@@ -49,13 +77,13 @@
 
   &__category-title {
     font-size: 1.8rem;
-    margin-bottom: 3.0rem; // Increased padding below the title
+    margin-bottom: 3.0rem;
     color: $color-primary;
     text-align: center;
     position: relative;
     font-family: $font-default;
     width: 100%;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -72,7 +100,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem; // Reduced gap between skills
+    gap: 1rem;
     width: 100%;
   }
 
@@ -81,52 +109,41 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: calc(50% - 0.5rem); // Two items per row with gap considered
+    width: calc(50% - 0.5rem);
   }
 
   &__icon {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    transition: transform 0.3s ease;
-    color: $color-primary;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    color: $color-black;
+    opacity: 0.7;
+
+    .dark-mode & {
+      color: $color-white;
+    }
 
     &:hover {
       transform: scale(1.1);
-      color: $color-primary-dark;
+      opacity: 1;
     }
   }
 
   &__name {
     font-size: 0.9rem;
     font-weight: 500;
-    color: $color-gray;
-  }
-}
+    color: $color-black;
 
-@media (max-width: $bp-md) {
-  .Skills {
-    padding: 4rem 0;
-
-    &__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .section-title {
-      &::after {
-        font-size: 3rem;
-      }
-    }
-
-    &__category-title {
-      font-size: 1.6rem;
+    .dark-mode & {
+      color: $color-white;
     }
   }
 }
 
-@media (max-width: $bp-sm) {
+@media only screen and (max-width: $bp-sm) {
   .Skills {
     &__item {
-      width: 100%; // Full width on small screens
+      width: 100%;
     }
   }
 }
