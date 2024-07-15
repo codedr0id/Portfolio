@@ -49,7 +49,7 @@ const About = () => {
           </p>
 
           <a
-            href="https://bit.ly/3W6tbDJ"
+            href="https://bit.ly/mehul_resume"
             target="_blank"
             rel="noreferrer"
             className="cta"
