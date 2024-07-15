@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer className="Footer">
         <p className="Footer__copyright">
-          &copy; 2021 <span>Mehul Lathi</span>
+          &copy; 2024 <span>Mehul Lathi</span>
         </p>
         <p className="Footer__message">
           <strong className="Footer__bold">&lt;/&gt;</strong> with{" "}
