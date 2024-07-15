@@ -1,60 +1,65 @@
-import React, { Component } from "react";
+import React from "react";
 import "../scss/About.scss";
 import aboutPhoto from "../img/Mehul.jpg";
 
-class About extends Component {
-  render() {
-    return (
-      <section style={{ marginTop: "20px" }} className="About" id="about">
-        <h2 className="section-title">Get to know me</h2>
+const About = () => {
+  return (
+    <section style={{ marginTop: "20px" }} className="About" id="about">
+      <h2 className="section-title">Get to know me</h2>
 
-        <div className="About__container">
-          <picture className="About__photo-container">
-            <source srcSet={aboutPhoto} media="(max-width: 1100px)" />
-            <img src={aboutPhoto} alt="Mehul Lathi" className="About__photo" />
-          </picture>
+      <div className="About__container">
+        <picture className="About__photo-container">
+          <source srcSet={aboutPhoto} media="(max-width: 1100px)" />
+          <img src={aboutPhoto} alt="Mehul Lathi" className="About__photo" />
+        </picture>
 
-          <div className="About__description">
-            <p>
-              My name is <span className="highlight">Mehul Lathi</span> and I'm
-              a Pre-Final year student at 𝐈𝐈𝐈𝐓 𝐕𝐚𝐝𝐨𝐝𝐚𝐫𝐚 currently pursuing my
-              𝘉𝘢𝘤𝘩𝘦𝘭𝘰𝘳𝘴 𝘪𝘯 𝘊𝘰𝘮𝘱𝘶𝘵𝘦𝘳 𝘚𝘤𝘪𝘦𝘯𝘤𝘦. I have an experience developing 💧
-              Fluid websites and 💻 Web Applications.
-            </p>
+        <div className="About__description">
+          <p>
+            Hello! I'm <span className="highlight">Mehul Lathi</span>, a
+            Software Engineer with 3 years of experience in digital transformation
+            and UPI technologies. I graduated from 
+            <span className="highlight"> Indian Institute of Information Technology - Vadodara </span> 
+            with a B.Tech in Computer Science & Engineering.
+          </p>
 
-            <p>
-              <span className="highlight">Technologies</span> I use and
-              constantly work on :-
-              <ul>
-                <li style={{ listStyle: "none" }}>
-                  ⭐ Javascript (ES6 and above)
-                </li>
-                <li style={{ listStyle: "none" }}>⭐ Python</li>
-                <li style={{ listStyle: "none" }}>⭐ ReactJS</li>
-                <li style={{ listStyle: "none" }}>⭐ NodeJS </li>
-                <li style={{ listStyle: "none" }}>⭐ MongoDB</li>
-                <li style={{ listStyle: "none" }}>⭐ Firebase </li>
-              </ul>
-            </p>
+          <p>
+            Currently, I'm working at <span className="highlight">Paytm Payments Bank</span>,
+            where I've been instrumental in developing cutting-edge fintech solutions.
+            My expertise lies in optimizing transaction processing, architecting
+            scalable microservices, and implementing robust monitoring solutions.
+          </p>
 
-            {/* <p>
-              🤞 𝐈 𝐚𝐦 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐥𝐨𝐨𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐈𝐧𝐭𝐞𝐫𝐧 𝐎𝐩𝐩𝐨𝐫𝐭𝐮𝐧𝐢𝐭𝐢𝐞𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐫𝐨𝐥𝐞 𝐨𝐟
-              𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞/𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 𝐚𝐧𝐝 𝐃𝐞𝐬𝐢𝐠𝐧.
-            </p> */}
+          <p>
+            <span className="highlight">Key Skills & Technologies:</span>
+            <ul>
+              <li>⭐ Java & Spring Boot</li>
+              <li>⭐ Microservices Architecture</li>
+              <li>⭐ UPI & Payment Systems</li>
+              <li>⭐ Event-driven Architecture</li>
+              <li>⭐ RESTful APIs</li>
+              <li>⭐ MySQL & ElasticSearch</li>
+            </ul>
+          </p>
 
-            <a
-              href="https://drive.google.com/file/d/1YcmMjR1rcdH_rD2Fb0wTNtq1j1mktPHI/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-              className="cta"
-            >
-              Resume
-            </a>
-          </div>
+          <p>
+            I'm passionate about enhancing system performance and streamlining
+            organizational processes in fast-paced fintech environments. My recent
+            work includes spearheading the development of NPCI's Lite Autopay, a
+            revolutionary product in the UPI ecosystem.
+          </p>
+
+          <a
+            href="https://bit.ly/3W6tbDJ"
+            target="_blank"
+            rel="noreferrer"
+            className="cta"
+          >
+            Resume
+          </a>
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
 export default About;

@@ -1,59 +1,132 @@
 @import "./variables.scss";
 
 .Skills {
-  &__container {
-    padding-bottom: 4rem;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr, auto;
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 2.5rem;
+  padding: 6rem 0;
+  background-color: $color-white-2;
+  margin-bottom: 3.0rem;
 
-    @media only screen and (max-width: $bp-md) {
-      @include flexCenter;
-      flex-direction: column;
-    }
-  }
-
-  &__heading {
-    grid-column: 1/2;
-    justify-self: end;
-    font-size: 2.5rem;
-    padding: 1.8rem 3.5rem 1.8rem 0;
-    margin-bottom: 1rem;
-    border-right: 1px solid rgba($color-primary, 0.2);
+  .section-title {
+    text-align: center;
+    margin-bottom: 4rem;
     position: relative;
-
-    @media only screen and (max-width: $bp-md) {
-      padding: 0 1.8rem 1.5rem 1.8rem;
-      margin-bottom: 0;
-      border-right: none;
-      border-bottom: 1px solid rgba($color-primary, 0.2);
+    color: $color-black;
+    
+    &::after {
+      content: attr(data-title);
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 5rem;
+      opacity: 0.1;
+      color: $color-primary;
     }
   }
 
-  &__list {
-    grid-column: 2/3;
-    justify-self: start;
-    list-style: none;
-    @include flexCenter;
-    flex-wrap: wrap;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-    &:nth-child(2) {
-      @media only screen and (max-width: $bp-md) {
-        margin-bottom: 2rem;
-      }
+  &__category {
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: $box-shadow-default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      transform: translateY(-5px);
     }
+  }
+
+  &__category-title {
+    font-size: 1.8rem;
+    margin-bottom: 3.0rem; // Increased padding below the title
+    color: $color-primary;
+    text-align: center;
+    position: relative;
+    font-family: $font-default;
+    width: 100%;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 2px;
+      background-color: $color-primary;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; // Reduced gap between skills
+    width: 100%;
   }
 
   &__item {
-    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    width: calc(50% - 0.5rem); // Two items per row with gap considered
+  }
 
-    i {
-      display: block;
-      font-size: 2.3rem;
-      padding-bottom: 1rem;
+  &__icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+    color: $color-primary;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $color-primary-dark;
+    }
+  }
+
+  &__name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $color-gray;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .Skills {
+    padding: 4rem 0;
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      &::after {
+        font-size: 3rem;
+      }
+    }
+
+    &__category-title {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .Skills {
+    &__item {
+      width: 100%; // Full width on small screens
     }
   }
 }

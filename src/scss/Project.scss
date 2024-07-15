@@ -9,12 +9,24 @@
     flex-direction: column;
   }
 
+  &:last-child {
+    // Styles for the last project (Lite Autopay without image)
+    flex-direction: column;
+    text-align: center;
+
+    .Project__details {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
   &:nth-child(2n) {
     flex-direction: row-reverse;
 
     @media only screen and (max-width: $bp-md) {
       flex-direction: column;
     }
+    
   }
 
   &:not(:last-child) {

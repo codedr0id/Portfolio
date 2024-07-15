@@ -1,44 +1,34 @@
 import React, { Component } from "react";
 import Project from "./Project";
 import algolizer from "../img/projects/algolizer.png";
-import roshambo from "../img/projects/roshambo.png";
-import bloodbank from "../img/projects/blood-bank.png";
 import portfolio from "../img/projects/portfolio.png";
 
 class ProjectsContainer extends Component {
   static defaultProps = {
     projects: [
       {
-        title: "My Portfolio",
-        img: portfolio,
-        description: "You are looking at it right now 😁",
-        tech: ["HTML", "SCSS", "React"],
-        previewUrl: "https://mehullathi.vercel.app",
-        sourceUrl: "https://github.com/codedr0id/Portfolio",
-      },
-      {
         title: "AlgoLizer",
         img: algolizer,
-        description: "Your friendly Algorithm Visualizer 📊",
-        tech: ["HTML", "CSS", "React"],
+        description: "Interactive web application visualizing 10+ sorting and pathfinding algorithms, enhancing algorithm comprehension for 500+ users.",
+        tech: ["JavaScript", "React", "CSS"],
         previewUrl: "https://algolizer.vercel.app",
         sourceUrl: "https://github.com/codedr0id/AlgoLizer",
       },
       {
-        title: "Roshambo",
-        img: roshambo,
-        description: "A Stone-Paper-Scissors game 🤘",
-        tech: ["HTML", "SCSS", "React"],
-        previewUrl: "https://roshambo-game.vercel.app/",
-        sourceUrl: "https://github.com/codedr0id/Roshambo",
+        title: "My Portfolio",
+        img: portfolio,
+        description: "Responsive personal portfolio showcasing projects and skills, built with modern web technologies and optimized for performance.",
+        tech: ["React", "Tailwind CSS", "Vercel"],
+        previewUrl: "https://mehullathi.vercel.app",
+        sourceUrl: "https://github.com/codedr0id/Portfolio",
       },
       {
-        title: "Blood Bank",
-        img: bloodbank,
-        description: "A Web App template for Blood Bank Organization 🩸",
-        tech: ["HTML", "CSS", "Javascript"],
-        previewUrl: "https://iiitbb.herokuapp.com/",
-        sourceUrl: "https://github.com/codedr0id/Blood-bank",
+        title: "Lite Autopay (NPCI)",
+        img: null, // No image available
+        description: "Pioneered NPCI's cutting-edge UPI product for recurring micropayments up to ₹2000. Engineered a hyper-scalable system processing 1000+ TPS, featuring zero-click e-mandate flow and real-time webhooks with sub-second latency.",
+        tech: ["Event-driven Architecture", "Domain-driven Design", "UPI 2.0", "Java", "Spring Boot"],
+        previewUrl: null, // No preview available for internal product
+        sourceUrl: null, // No source code available for internal product
       },
     ],
   };

@@ -57,6 +57,16 @@
       margin-bottom: 2rem;
       line-height: 1.6;
     }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 1rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 
   .highlight {
